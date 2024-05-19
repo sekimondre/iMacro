@@ -1,11 +1,11 @@
-//
-
 import SwiftUI
 import SwiftData
 
 struct ContentView: View {
+
     @Environment(\.modelContext) private var modelContext
     @Query private var items: [Item]
+    @StateObject private var recorder = Recorder()
 
     var body: some View {
         NavigationSplitView {
@@ -28,7 +28,34 @@ struct ContentView: View {
                 }
             }
         } detail: {
-            Text("Select an item")
+//            Text("Select an item")
+            VStack(spacing: 20) {
+                        Button("Start Recording") {
+                            recorder.startRecording()
+                        }
+                        .padding()
+                        .background(Color.green)
+                        .foregroundColor(.white)
+                        .cornerRadius(8)
+                        
+                        Button("Stop Recording") {
+                            recorder.stopRecording()
+                        }
+                        .padding()
+                        .background(Color.red)
+                        .foregroundColor(.white)
+                        .cornerRadius(8)
+                        
+                        Button("Play Recording") {
+                            recorder.playBack()
+                        }
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(8)
+                    }
+                    .frame(width: 200, height: 200)
+                    .padding()
         }
     }
 
