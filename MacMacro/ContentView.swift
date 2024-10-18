@@ -6,6 +6,9 @@ struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var items: [Item]
     @StateObject private var recorder = Recorder()
+    @State private var text: String = ""
+    
+    @State private var engine = Engine()
 
     var body: some View {
         NavigationSplitView {
@@ -47,7 +50,8 @@ struct ContentView: View {
                         .cornerRadius(8)
                         
                         Button("Play Recording") {
-                            recorder.playBack()
+//                            recorder.playBack()
+                            recorder.infinitePlayback()
                         }
                         .padding()
                         .background(Color.blue)
@@ -56,6 +60,25 @@ struct ContentView: View {
                     }
                     .frame(width: 200, height: 200)
                     .padding()
+                    .toolbar {
+                        ToolbarItem {
+                            TextField(text: $engine.targetPID) {
+                                Text("PID")
+                            }
+                        }
+                        ToolbarItem {
+                            Button(action: engine.stopPlayback) {
+                                Label("Stop", systemImage: "stop")
+                                    .symbolVariant(engine.isPlaying ? .fill : .none)
+                            }
+                        }
+                        ToolbarItem {
+                            Button(action: engine.playbackHard) {
+                                Label("Play", systemImage: "play")
+                                    .symbolVariant(engine.isPlaying ? .none : .fill)
+                            }
+                        }
+                    }
         }
     }
 

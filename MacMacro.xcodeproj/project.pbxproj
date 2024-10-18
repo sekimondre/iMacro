@@ -13,6 +13,8 @@
 		762AD0012BFA62AF00EFC7BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 762AD0002BFA62AF00EFC7BF /* Assets.xcassets */; };
 		762AD0042BFA62AF00EFC7BF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 762AD0032BFA62AF00EFC7BF /* Preview Assets.xcassets */; };
 		762AD00C2BFA647E00EFC7BF /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762AD00B2BFA647E00EFC7BF /* Recorder.swift */; };
+		76DEAE922CC2ECBA00DAF78D /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DEAE912CC2ECBA00DAF78D /* Engine.swift */; };
+		76DEAE942CC3054C00DAF78D /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DEAE932CC3054C00DAF78D /* Routine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		762AD0052BFA62AF00EFC7BF /* MacMacro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacMacro.entitlements; sourceTree = "<group>"; };
 		762AD00B2BFA647E00EFC7BF /* Recorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
 		762AD00D2BFA676600EFC7BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		76DEAE912CC2ECBA00DAF78D /* Engine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		76DEAE932CC3054C00DAF78D /* Routine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 				762ACFFC2BFA62AE00EFC7BF /* ContentView.swift */,
 				762AD00B2BFA647E00EFC7BF /* Recorder.swift */,
 				762ACFFE2BFA62AE00EFC7BF /* Item.swift */,
+				76DEAE912CC2ECBA00DAF78D /* Engine.swift */,
+				76DEAE932CC3054C00DAF78D /* Routine.swift */,
 				762AD0002BFA62AF00EFC7BF /* Assets.xcassets */,
 				762AD0052BFA62AF00EFC7BF /* MacMacro.entitlements */,
 				762AD0022BFA62AF00EFC7BF /* Preview Content */,
@@ -149,8 +155,10 @@
 			files = (
 				762ACFFD2BFA62AE00EFC7BF /* ContentView.swift in Sources */,
 				762ACFFF2BFA62AE00EFC7BF /* Item.swift in Sources */,
+				76DEAE942CC3054C00DAF78D /* Routine.swift in Sources */,
 				762ACFFB2BFA62AE00EFC7BF /* MacMacroApp.swift in Sources */,
 				762AD00C2BFA647E00EFC7BF /* Recorder.swift in Sources */,
+				76DEAE922CC2ECBA00DAF78D /* Engine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
